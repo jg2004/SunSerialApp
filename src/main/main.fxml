@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.MainController">
+   <top>
+      <ToolBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <items>
+            <ImageView fx:id="openFileImageView" fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="images/ic_folder_open_black_24dp_1x.png" />
+               </image>
+            </ImageView>
+            <Separator orientation="VERTICAL" />
+            <ImageView fx:id="saveImageView" fitHeight="24.0" fitWidth="24.0" layoutX="10.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="images/ic_save_black_24dp_1x.png" />
+               </image>
+            </ImageView>
+            <Separator layoutX="38.0" layoutY="10.0" orientation="VERTICAL" />
+            <ImageView fx:id="startPollingImageView" fitHeight="24.0" fitWidth="24.0" layoutX="38.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="images/ic_play_arrow_black_24dp_1x.png" />
+               </image>
+            </ImageView>
+            <Separator layoutX="76.0" layoutY="10.0" orientation="VERTICAL" />
+            <ImageView fx:id="settingsImageView" fitHeight="24.0" fitWidth="24.0" layoutX="66.0" layoutY="13.0" onMouseClicked="#handleSettingsClicked" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="images/ic_settings_applications_black_24dp_2x.png" />
+               </image>
+            </ImageView>
+            <Separator layoutX="136.0" layoutY="10.0" orientation="VERTICAL" />
+            <ComboBox prefWidth="150.0" />
+            <Button mnemonicParsing="false" text="Button" />
+            <Separator layoutX="136.0" layoutY="10.0" orientation="VERTICAL" />
+        </items>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </ToolBar>
+   </top>
+</BorderPane>

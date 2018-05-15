@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.CenterController">
+
+
+    <children>
+        <HBox fx:id="progressHbox" layoutX="14.0" layoutY="286.0" prefHeight="40.0" prefWidth="157.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0">
+            <children>
+                <ProgressIndicator fx:id="progressIndicator" prefHeight="35.0" prefWidth="35.0" />
+                <Label fx:id="progressLabel" alignment="BOTTOM_LEFT" prefHeight="40.0" prefWidth="120.0" text="finding Com Ports..." />
+            </children>
+        </HBox>
+
+        <HBox layoutX="669.0" layoutY="52.0" spacing="5.0" AnchorPane.rightAnchor="50.0">
+            <children>
+                <ComboBox fx:id="comboBoxComPortDescriptions" prefHeight="25.0" promptText="COM PORTS" />
+                <Button fx:id="refreshButton" mnemonicParsing="false" onAction="#handleRefreshComPortList" />
+            </children>
+        </HBox>
+      <GridPane fx:id="displayGrid" hgap="5.0" layoutX="300.0" layoutY="110.0" style="-fx-border-color: black; -fx-border-radius: 10px;" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="300.0">
+        <columnConstraints>
+          <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label fx:id="gridLabel_1" text="Cham:" />
+            <Label fx:id="gridLabel_response_1" text="310.21" GridPane.columnIndex="1" GridPane.hgrow="NEVER" />
+            <Label fx:id="gridLabel_2" text="User:" GridPane.rowIndex="1" />
+            <Label fx:id="gridLabel_response_2" text="200.12" GridPane.columnIndex="1" GridPane.hgrow="NEVER" GridPane.rowIndex="1" />
+            <Label fx:id="gridLabel_3" layoutX="80.0" layoutY="47.0" text="###" GridPane.rowIndex="2" />
+            <Label fx:id="gridLabel_4" layoutX="80.0" layoutY="77.0" text="###" GridPane.rowIndex="3" />
+            <Label fx:id="gridLabel_5" layoutX="80.0" layoutY="107.0" text="###" GridPane.rowIndex="4" />
+            <Label fx:id="gridLabel_6" layoutX="73.0" layoutY="17.0" text="###" GridPane.rowIndex="5" />
+            <Label fx:id="gridLabel_response_3" layoutX="112.0" layoutY="47.0" text="###" GridPane.columnIndex="1" GridPane.hgrow="NEVER" GridPane.rowIndex="2" />
+            <Label fx:id="gridLabel_response_4" layoutX="112.0" layoutY="77.0" text="###" GridPane.columnIndex="1" GridPane.hgrow="NEVER" GridPane.rowIndex="3" />
+            <Label fx:id="gridLabel_response_5" layoutX="112.0" layoutY="107.0" text="###" GridPane.columnIndex="1" GridPane.hgrow="NEVER" GridPane.rowIndex="4" />
+            <Label fx:id="gridLabel_response_6" layoutX="112.0" layoutY="137.0" text="###" GridPane.columnIndex="1" GridPane.hgrow="NEVER" GridPane.rowIndex="5" />
+         </children>
+      </GridPane>
+      <ToggleButton fx:id="toggleButtonOnOff" layoutX="356.0" layoutY="412.0" mnemonicParsing="false" onAction="#handleToggleOnOff" text="ToggleButton" />
+      <Button fx:id="btnSendCommand" layoutX="350.0" layoutY="471.0" mnemonicParsing="false" onAction="#handleSendButtonClicked" text="Send Command" />
+
+    </children>
+</AnchorPane>
